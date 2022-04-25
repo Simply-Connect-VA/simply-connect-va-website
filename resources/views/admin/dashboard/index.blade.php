@@ -32,7 +32,7 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        {{--@include('admin.dashboard.pirep_chart')--}}
+        @include('admin.dashboard.pirep_chart')
       </div>
       <div class="col-md-6">
 
