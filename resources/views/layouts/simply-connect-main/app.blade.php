@@ -47,26 +47,23 @@
 <!-- End Navbar -->
 <div class="wrapper">
   @yield('carousel')
-  <div class="container-fluid">
 
-    {{-- These should go where you want your content to show up --}}
-    @include('flash.message')
-    @yield('content')
-    {{-- End the above block--}}
-
-  </div>
+  {{-- These should go where you want your content to show up --}}
+  @include('flash.message')
+  @yield('content')
+  {{-- End the above block--}}
 
   @yield('lists')
 
   <footer class="footer bg-black text-white">
     <div class="container">
       <div class="copyright">
-        &copy; 2021 Simply Connect Virtual Airline
+        &copy; {{ now()->format('Y') }} Simply Connect Virtual Airline
         {{--
-        Please keep the copyright message somewhere, as-per the LICENSE file
-                Thanks!!
+            Please keep the copyright message somewhere, as-per the LICENSE file
+            Thanks!!
         --}}
-        powered by <a href="http://www.phpvms.net" target="_blank">phpvms</a>
+        Powered by <a href="http://www.phpvms.net" target="_blank">PHPVMS</a>
       </div>
     </div>
   </footer>

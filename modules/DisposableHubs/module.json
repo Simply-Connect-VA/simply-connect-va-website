@@ -1,0 +1,16 @@
+{
+    "name": "DisposableHubs",
+    "alias": "disposablehubs",
+    "description": "A module to display Hubs, Hub Details and System Stats",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\DisposableHubs\\Providers\\HubsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+      "helpers.php"
+    ],
+    "requires": []
+}

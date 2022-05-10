@@ -1,0 +1,53 @@
+<?php
+
+return [
+  // Common
+  'type'     => 'Tipo',
+  'code'     => 'Código',
+  'cost'     => 'Costo',
+  'groundh'  => 'Ground Handling',
+  'fuel'     => 'Combustible',
+  'subfleet' => 'SubFlota',
+  'hub'      => 'Hub|Hubs',
+  'airport'  => 'Aeropuerto|Aeropuertos',
+  'hubtitle' => 'Hub Detalles',
+  'location' => 'Localización',
+  'timezone' => 'Zona horaria',
+  'hubplt'   => 'Pilotos del Hub',
+  'visitplt' => 'Pilotos Visitantes',
+  'hubac'    => 'Flota del Hub',
+  'visitac'  => 'Aeronaves Visitantes',
+  'hubflts'  => 'Hub Vuelos',
+  'hubdep'   => 'Hub Salidas',
+  'hubarr'   => 'Hub Llegadas',
+  'hubreps'  => 'Hub PIREPs',
+  // Flights
+  'orig'      => 'Origen',
+  'dest'      => 'Destino',
+  'dist'      => 'Distancia',
+  'flightno'  => 'Número de Vuelo',
+  'flightid'  => 'Ident. Vuelo (Code & Leg)',
+  'std'       => 'Salida Programada',
+  'sta'       => 'Llegada Programada',
+  // Aircraft
+  'ftime'     => 'Tiempo de Vuelo',
+  'lastlnd'   => 'Ultimo Aterrizaje',
+  'reg'       => 'Matricula',
+  // Stats
+  'stats'     => 'Estadísticas',
+  'tpirep'    => 'PIREPs totales',
+  'rpirep'    => 'PIREPs rechazados',
+  'aftime'    => 'Tiempo Vuelo Prom.',
+  'adist'     => 'Distancia Promedio',
+  'tfuel'     => 'Combustible Tot. Cons.',
+  'afuel'     => 'Combustible Prom. Cons. / Vuelo',
+  'hfuel'     => 'Combustible Prom. Cons./ Hora',
+  'alanding'  => 'Aterrizaje Promedio',
+  'ascore'    => 'Puntuación Promedio',
+  'soverall'  => 'Pilotos Lideres',
+  'syear'     => 'Pilotos Lideres Anuales',
+  'syearal'   => 'Aerolínea Líder Anual',
+  'smonth'    => 'Pilotos lideres Mensuales',
+  'smonthal'  => 'Aerolíneas lideres Mensuales',
+];
+

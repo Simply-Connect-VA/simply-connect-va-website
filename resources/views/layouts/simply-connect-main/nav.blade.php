@@ -5,21 +5,34 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('frontend.dashboard.index') }}">
             <i class="fas fa-tachometer-alt"></i>
-            <p>@lang('common.dashboard')</p>
+            @lang('common.dashboard')
           </a>
         </li>
       @endif
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-building"></i> Company
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/"><i class="fas fa-home"></i> Home</a>
+          <a class="dropdown-item" href="/about"><i class="fas fa-question"></i> About Us</a>
+          <a class="dropdown-item" href="/docs/rules"><i class="fas fa-balance-scale"></i> Pilot Rules</a>
+          <a class="dropdown-item" href="/contact"><i class="fas fa-envelope"></i> Contact Us</a>
+          <a class="dropdown-item" href="/donations"><i class="fas fa-hand-holding-usd"></i> Donations</a>
+        </div>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="{{ route('frontend.livemap.index') }}">
           <i class="fas fa-globe"></i>
-          <p>@lang('common.livemap')</p>
+          @lang('common.livemap')
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ route('frontend.pilots.index') }}">
           <i class="fas fa-users"></i>
-          <p>{{ trans_choice('common.pilot', 2) }}</p>
+          {{ trans_choice('common.pilot', 2) }}
         </a>
       </li>
 
@@ -28,7 +41,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ url($link['url']) }}">
             <i class="{{ $link['icon'] }}"></i>
-            <p>{{ ($link['title']) }}</p>
+            {{ ($link['title']) }}
           </a>
         </li>
       @endforeach
@@ -37,7 +50,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ $page->url }}" target="{{ $page->new_window ? '_blank':'_self' }}">
             <i class="{{ $page['icon'] }}"></i>
-            <p>{{ $page['name'] }}</p>
+            {{ $page['name'] }}
           </a>
         </li>
       @endforeach
@@ -46,13 +59,13 @@
          <li class="nav-item">
           <a class="nav-link" href="{{ url('/docs/preregister') }}">
             <i class="far fa-id-card"></i>
-            <p>@lang('common.register')</p>
+            @lang('common.register')
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url('/login') }}">
             <i class="fas fa-sign-in-alt"></i>
-            <p>@lang('common.login')</p>
+            @lang('common.login')
           </a>
         </li>
       @else
@@ -68,24 +81,24 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('frontend.flights.index') }}">
             <i class="fab fa-avianex"></i>
-            <p>{{ trans_choice('common.flight', 2) }}</p>
+            {{ trans_choice('common.flight', 2) }}
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('frontend.pireps.index') }}">
             <i class="fas fa-cloud-upload-alt"></i>
-            <p>My Flight Reports</p>
+            My Flight Reports
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/stats">
-            <p>Simply Connect Stats</p>
+            Simply Connect Stats
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('frontend.downloads.index') }}">
             <i class="fas fa-download"></i>
-            <p>{{ trans_choice('common.download', 2) }}</p>
+            {{ trans_choice('common.download', 2) }}
           </a>
         </li>
 
@@ -94,7 +107,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url($link['url']) }}">
               <i class="{{ $link['icon'] }}"></i>
-              <p>{{ ($link['title']) }}</p>
+              {{ ($link['title']) }}
             </a>
           </li>
         @endforeach

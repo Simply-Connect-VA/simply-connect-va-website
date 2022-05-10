@@ -22,46 +22,48 @@
 @endsection
 
 @section('content')
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row bg-black text-white">
-				<div class="container py-5">
-					<div class="row">
-						<div class="col-md-8">
-							<p><b>SimplyConnect</b> is a virtual airline (VA) which is an online organisation of flight simulator enthusiasts flying together in one community under one name. The idea is to make the flight simulator experience more realistic and enjoyable.</p>
-							<p>We operate a varied fleet of aircraft, from turboprops right up to the latest most technologically advanced jet airliners. For the more advanced pilot in command we use both IVAO and VATSIM online gaming servers and for the less experienced we have an option of flying offline for you to get your bearings. We also host weekly online/offline group events for all.</p>
-              <p>
-					      <a class="btn btn-primary" href="{{url('/page/about-us')}}">Learn More</a>
-				      </pclass=>
-							<p class="social-buttons mt-4 mb-0">
-								@foreach([
-									'youtube' => 'https://www.youtube.com/channel/UCdwdoC-FiKbgbZzbSXMGgzg',
-									'discord' => 'https://discord.gg/p8dmube',
-									'twitter' => 'https://twitter.com/agame_r',
-									'facebook-f' => 'https://www.facebook.com/insideagamer7'
-								] as $k => $v)
-								<a target="_blank" href="{{$v}}" class="social-button">
-									<i class="fab fa-{{$k}}"></i>
-								</a>
-								@endforeach
-							</p>
-						</div>
-						<div class="col-md-4">
-							<h4 class="mt-0">Today Stats</h4>
-							<ul class="list-group">
-								@foreach([
-									'Total Pilots' => Widget::todayStats(['type'=>'totalPilots']),
-									'Total Flights' => Widget::todayStats(['type'=>'totalFlights']),
-									'Total Hours Flown' => Widget::todayStats(['type'=>'totalHours']),
-									'Total Schedules' => Widget::todayStats(['type'=>'totalSchedules']),
-									'Flights Today' => Widget::todayStats(['type'=>'totalPireps'])
-								] as $k => $v)
-									<li class="list-group-item d-flex justify-content-between align-items-center">
-										{{$k}}
-										<span class="badge badge-primary badge-pill">{{$v}}</span>
-									</li>
-								@endforeach
-							</ul>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row bg-black text-white">
+					<div class="container py-5">
+						<div class="row">
+							<div class="col-md-8">
+								<p><b>SimplyConnect</b> is a virtual airline (VA) which is an online organisation of flight simulator enthusiasts flying together in one community under one name. The idea is to make the flight simulator experience more realistic and enjoyable.</p>
+								<p>We operate a varied fleet of aircraft, from turboprops right up to the latest most technologically advanced jet airliners. For the more advanced pilot in command we use both IVAO and VATSIM online gaming servers and for the less experienced we have an option of flying offline for you to get your bearings. We also host weekly online/offline group events for all.</p>
+								<p>
+									<a class="btn btn-primary" href="{{url('/page/about-us')}}">Learn More</a>
+								</pclass=>
+								<p class="social-buttons mt-4 mb-0">
+									@foreach([
+										'youtube' => 'https://www.youtube.com/channel/UCdwdoC-FiKbgbZzbSXMGgzg',
+										'discord' => 'https://discord.gg/p8dmube',
+										'twitter' => 'https://twitter.com/agame_r',
+										'facebook-f' => 'https://www.facebook.com/insideagamer7'
+									] as $k => $v)
+									<a target="_blank" href="{{$v}}" class="social-button">
+										<i class="fab fa-{{$k}}"></i>
+									</a>
+									@endforeach
+								</p>
+							</div>
+							<div class="col-md-4">
+								<h4 class="mt-0">Today Stats</h4>
+								<ul class="list-group">
+									@foreach([
+										'Total Pilots' => Widget::todayStats(['type'=>'totalPilots']),
+										'Total Flights' => Widget::todayStats(['type'=>'totalFlights']),
+										'Total Hours Flown' => Widget::todayStats(['type'=>'totalHours']),
+										'Total Schedules' => Widget::todayStats(['type'=>'totalSchedules']),
+										'Flights Today' => Widget::todayStats(['type'=>'totalPireps'])
+									] as $k => $v)
+										<li class="list-group-item d-flex justify-content-between align-items-center">
+											{{$k}}
+											<span class="badge badge-primary badge-pill">{{$v}}</span>
+										</li>
+									@endforeach
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -75,32 +77,6 @@
     <div class="row">
       <div class="col-md-6">
 				{{Widget::latestNews(['count' => 5])}}
-				<!--
-				<h3>Recent News</h3>
-				<ul class="list-unstyled">
-					<li class="media">
-						<svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"></rect></svg>
-						<div class="media-body">
-							<h5 class="mt-0 mb-1">List Item</h5>
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
-					<li class="media">
-						<svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"></rect></svg>
-						<div class="media-body">
-							<h5 class="mt-0 mb-1">List Item</h5>
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
-					<li class="media">
-						<svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"></rect></svg>
-						<div class="media-body">
-							<h5 class="mt-0 mb-1">List Item</h5>
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
-				</ul>
-				-->
 			</div>
       <div class="col-md-6">
 				<div class="nav nav-tabs" role="tablist">
