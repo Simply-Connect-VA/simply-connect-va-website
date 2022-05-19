@@ -32,7 +32,7 @@
                 title="{{ $country->alpha2($user->country)['name'] }}"></span>
         @endif
       </td>
-      <td class="text-center">{{ $user->airline->icao }}</td>
+      <td class="text-center">{{ $user->airline->icao ?? 'no icao' }}</td>
       <td class="text-center">
         @if($user->current_airport)
           {{ $user->curr_airport_id }}

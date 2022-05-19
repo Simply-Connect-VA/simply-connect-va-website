@@ -85,7 +85,7 @@
 
 @section('scripts')
 <script>
-  var images = ['jan_2020.png', 'jan-2020-2.jpg', 'jan-2020-3.jpg', 'feb_2021_1.png', 'feb_2021_2.png', 'feb_2021_3.png', 'mar_2021_1.png', 'mar_2021_2.png', 'mar_2021_3.png', 'apr_2021_1.png', 'apr_2021_2.png', 'apr_2021_3.png'];
+  var images = ['jan_2020.png', 'jan-2020-2.jpg', 'jan-2020-3.jpg', 'feb_2021_1.png', 'feb_2021_2.png', 'feb_2021_3.png', 'mar_2021_1.png', 'mar_2021_2.png', 'mar_2021_3.png', 'apr_2022.png', 'apr_2021_2.png', 'apr_2021_3.png'];
   document.querySelector('.bg-image').style.backgroundImage = 'url(/assets/frontend/img/potm/' + images[Math.floor(Math.random() * images.length)] + ')';
 </script>
 @endsection

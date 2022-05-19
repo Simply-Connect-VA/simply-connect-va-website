@@ -41,7 +41,7 @@ return [
      * https://www.google.com/recaptcha/admin
      */
     'captcha' => [
-        'enabled' => false,
+        'enabled' => true,
 
         'sitekey' => '',
         'secret'  => '',
