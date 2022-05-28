@@ -5238,10 +5238,34 @@ a {
 }
 body {
   font-family: Kanit, sans-serif;
+  font-size: 16px;
+}
+
+p {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #893b3b;
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #e1cdcd;
+}
+
+.btn,
+.btn:active,
+.btn:focus,
+.btn:hover {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
 }
 
 .bg-black {
   background: #000;
+}
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black h4, .bg-black h5, .bg-black h6,
+.bg-black .h1, .bg-black .h2, .bg-black .h3, .bg-black .h4, .bg-black .h5, .bg-black .h6 {
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #333;
 }
 .bg-black .list-group-item {
   background: none;
@@ -5265,25 +5289,27 @@ body {
 .navbar .navbar-toggler.collapsed {
   background: #050505;
 }
-
-.navbar .navbar-nav .nav-link:not(.btn) {
-  font-size: 100%;
+.navbar .navbar-nav .nav-item .dropdown-item .fas,
+.navbar .navbar-nav .nav-item .dropdown-item svg[role=img] {
+  margin: 0 0.5em 0 0;
 }
-
+.navbar .navbar-nav .nav-item .nav-link .fas,
+.navbar .navbar-nav .nav-item .nav-link svg[role=img] {
+  margin: 0 0.25em 0 0;
+}
 .navbar .navbar-nav .nav-item .nav-link:not(.btn) {
   background: none;
+  border-radius: 0;
   border: 0;
   border-bottom: 4px solid transparent;
-  border-radius: 0;
+  font-size: 100%;
 }
-
 .navbar .navbar-nav .nav-item .nav-link:not(.btn):hover {
   background: none;
-  border-bottom-color: red;
+  border-bottom-color: #b94a4a;
   border-radius: 0;
 }
-
-.navbar .navbar-nav .nav-item.active .nav-link:not(.btn),
+.navbar .navbar-nav .nav-item.active .nav-link:not(.btn), .navbar .navbar-nav .nav-item.show .nav-link:not(.btn),
 .navbar .navbar-nav .nav-item .nav-link:not(.btn):focus {
   background: #fff;
   border-radius: 0;
@@ -5307,7 +5333,7 @@ body {
 }
 
 a, a:focus, a:hover {
-  color: red;
+  color: #b94a4a;
 }
 
 .footer .copyright {
@@ -5320,6 +5346,21 @@ a, a:focus, a:hover {
 
 .leaflet-marker-icon {
   filter: grayscale(1) invert(1);
+}
+
+.quote-1,
+.quote-2 {
+  background: #e4d2d2;
+  border-radius: 1em;
+  border: 1px solid;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.25);
+  color: #893b3b;
+  font-size: 200%;
+  font-weight: 700;
+  margin-top: 2em;
+  padding: 2em;
+  position: relative;
+  text-align: center;
 }
 
 .social-buttons {
@@ -5346,6 +5387,44 @@ a, a:focus, a:hover {
   width: 1.5em;
 }
 .social-button:hover {
-  border-color: red;
-  color: red;
+  border-color: #b94a4a;
+  color: #b94a4a;
+}
+
+.sponsors [role=group] {
+  overflow: auto;
+}
+.sponsors a img {
+  filter: grayscale();
+  min-width: 150px;
+  opacity: 0.5;
+  transition: all 0.5s ease-out;
+}
+.sponsors a:focus img, .sponsors a:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+.row-home .col-md-6 {
+  height: 500px;
+}
+.row-home .col-md-6 .nav-tabs {
+  background: #f96332;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.125);
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+}
+.row-home .col-md-6 > .card {
+  height: 100%;
+}
+.row-home .col-md-6 > .card .card {
+  box-shadow: none;
+  overflow: auto;
+}
+
+.vatsim-events {
+  border: 0;
+  display: block;
+  height: calc(100% - 54px);
+  width: 100%;
 }

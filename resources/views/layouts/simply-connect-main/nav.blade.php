@@ -18,6 +18,7 @@
           <a class="dropdown-item" href="/"><i class="fas fa-home"></i> Home</a>
           <a class="dropdown-item" href="/about"><i class="fas fa-question"></i> About Us</a>
           <a class="dropdown-item" href="/docs/rules"><i class="fas fa-balance-scale"></i> Pilot Rules</a>
+          <a class="dropdown-item" href="/pilots"><i class="fas fa-balance-scale"></i> Pilots</a>
           <a class="dropdown-item" href="/contact"><i class="fas fa-envelope"></i> Contact Us</a>
           <a class="dropdown-item" href="/donations"><i class="fas fa-hand-holding-usd"></i> Donations</a>
         </div>
@@ -27,12 +28,6 @@
         <a class="nav-link" href="{{ route('frontend.livemap.index') }}">
           <i class="fas fa-globe"></i>
           @lang('common.livemap')
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('frontend.pilots.index') }}">
-          <i class="fas fa-users"></i>
-          {{ trans_choice('common.pilot', 2) }}
         </a>
       </li>
 

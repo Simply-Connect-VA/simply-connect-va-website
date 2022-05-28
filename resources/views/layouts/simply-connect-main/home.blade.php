@@ -2,7 +2,7 @@
 @section('title', __('home.welcome.title'))
 
 @section('carousel')
-	<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper">
+	<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper swiper-home">
 		<div class="swiper-wrapper">
 			@foreach(File::glob(public_path() . '/assets/frontend/img/sca/*.jpg') as $image)
 				<div class="swiper-slide">
@@ -33,7 +33,7 @@
 								<p>We operate a varied fleet of aircraft, from turboprops right up to the latest most technologically advanced jet airliners. For the more advanced pilot in command we use both IVAO and VATSIM online gaming servers and for the less experienced we have an option of flying offline for you to get your bearings. We also host weekly online/offline group events for all.</p>
 								<p>
 									<a class="btn btn-primary" href="{{url('/page/about-us')}}">Learn More</a>
-								</pclass=>
+								</p>
 								<p class="social-buttons mt-4 mb-0">
 									@foreach([
 										'youtube' => 'https://www.youtube.com/channel/UCdwdoC-FiKbgbZzbSXMGgzg',
@@ -74,48 +74,50 @@
 
 @section('lists')
   <div class="container py-5">
-    <div class="row">
+    <div class="row row-home">
       <div class="col-md-6">
-				{{Widget::latestNews(['count' => 5])}}
+				<div class="card">
+					{{Widget::latestNews(['count' => 5])}}
+				</div>
 			</div>
       <div class="col-md-6">
-				<div class="nav nav-tabs" role="tablist">
-					Vatsim Events
+				<div class="card">
+					<div class="nav nav-tabs" role="tablist">
+						Vatsim Events
+					</div>
+					<iframe class="vatsim-events" src="https://my.vatsim.net/events/today"></iframe>
 				</div>
-				<iframe class="card border-black-bottom vatsim-events" src="https://my.vatsim.net/events/today"></iframe>
 			</div>
     </div>
   </div>
 @endsection
 
 @section('styles')
-	<!-- Swiper CSS -->
-  <link href="{{ public_asset('/assets/frontend/css/swiper.min.css') }}" rel="stylesheet"/>
 	<style>
 	@keyframes spin {
 		to {
 			transform: rotate(360deg);
 		}
 	}
-	.swiper-button-prev {
-		left: 40px;
-	}
-	.swiper-button-next {
-		right: 40px;
-	}
-	.swiper-lazy-preloader {
-		animation: spin 1s linear infinite;
-	}
-	.swiper {
+	.swiper-home {
 		width: 100%;
 		height: auto;
 	}
-	.swiper-slide {
+	.swiper-home .swiper-button-prev {
+		left: 40px;
+	}
+	.swiper-home .swiper-button-next {
+		right: 40px;
+	}
+	.swiper-home .swiper-lazy-preloader {
+		animation: spin 1s linear infinite;
+	}
+	.swiper-home .swiper-slide {
 		background: #000;
 		padding-bottom: 56.25%;
 		position: relative;
 	}
-	.swiper-slide img {
+	.swiper-home .swiper-slide img {
 		display: block;
 		position: absolute;
 		top: 0;
@@ -127,24 +129,21 @@
 @endsection
 
 @section('scripts')
-	<!-- Swiper JS -->
-  <script src="{{ public_asset('/assets/frontend/js/swiper.min.js') }}"></script>
-	<!-- Initialize Swiper -->
 	<script>
-		const swiper = new Swiper(".swiper", {
-			lazy: true,
+		const gallerySwiper = new Swiper('.swiper-home', {
 			autoHeight: true,
 			autoplay: {
 				delay: 5000,
 				disableOnInteraction: false,
 			},
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-			},
+			lazy: true,
 			navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
 			},
 		});
 	</script>

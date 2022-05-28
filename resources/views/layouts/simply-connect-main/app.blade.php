@@ -24,6 +24,10 @@
 
   {{-- Start of the required files in the head block --}}
   <link href="{{ public_mix('/assets/global/css/vendor.css') }}" rel="stylesheet"/>
+	{{-- Swiper CSS --}}
+  <link href="{{ public_asset('/assets/frontend/css/swiper.min.css') }}" rel="stylesheet"/>
+	{{-- Swiper JS --}}
+  <script src="{{ public_asset('/assets/frontend/js/swiper.min.js') }}"></script>
 
   @yield('styles')
 
@@ -54,6 +58,35 @@
   {{-- End the above block--}}
 
   @yield('lists')
+
+  <div class="bg-light py-5">
+    <div class="container sponsors">
+      <div class="swiper swiper-sponsors">
+        <div class="align-items-center d-flex swiper-wrapper">
+          @foreach(File::glob(public_path() . '/assets/frontend/img/sponsors/*.png') as $logo)
+            <div class="swiper-slide">
+              <a class="d-block mx-3" href="https://{{basename($logo, '.png')}}" target="_blank">
+                <img alt="{{basename($logo, '.png')}}" src="{{strtr($logo, [public_path() . DIRECTORY_SEPARATOR => '/', DIRECTORY_SEPARATOR => '/'])}}">
+              </a>
+            </div>
+          @endforeach
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+		const sponsorsSwiper = new Swiper('.swiper-sponsors', {
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			navigation: false,
+			pagination: false,
+      slidesPerView: 6,
+      // spaceBetween: 30,
+		});
+  </script>
 
   <footer class="footer bg-black text-white">
     <div class="container">

@@ -7,8 +7,8 @@
       <div class="row">
         <div class="col-md-12">
           <h2><i class="fas fa-info-circle"></i> About Us</h2>
+          <p class="lead mb-5">Established in 2020, Simply Connect is Virtual Airline which has a Growing membership.</p>
 
-          <p class="lead">Established in 2020, Simply Connect is Virtual Airline which has a Growing membership.</p>
           <p>These members include aspiring teenagers, active and retired airline captains, and flight simulation enthusiasts alike. It is a voluntary, not-for-profit organisation, that fulfills a role to provide a structured, hands-on educational environment for aspiring pilots using any flight sim there are no limits.</p>
           <p>I started this project on my small YouTube channel hoping to create a pressure free environment for all pilots. Please make sure you come join our discord for help <a href="https://discord.gg/p8dmube" target="_blank">https://discord.gg/p8dmube</a>.</p>
           <p>It is also a very active community where people can discuss aviation related matters, enjoy flight simulation and just generally have fun.</p>

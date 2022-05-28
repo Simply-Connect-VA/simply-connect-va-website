@@ -7,6 +7,7 @@
       <div class="row">
         <div class="col-md-12">
           <h2><i class="fas fa-envelope-open-text"></i> Contact Us</h2>
+          <p class="lead mb-5">Lorem ipsum dolor sit amet.</p>
 
           <p><b>TODO:</b> Contact form goes here.</p>
 
